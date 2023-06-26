@@ -41,17 +41,30 @@ class TestSolution(unittest.TestCase):
         INPUT = "III"
         EXPECTED = 3
         OUTPUT = romanToInt(INPUT)
+
+        print(f'\nInput: {INPUT}')
+        print(f'Expected: {EXPECTED}')
+        print(f'Output: {OUTPUT}')
         self.assertEqual(OUTPUT, EXPECTED)
     def test_case_2(self):
         INPUT = "LVIII"
         EXPECTED = 58
         OUTPUT = romanToInt(INPUT)
+
+        print(f'\nInput: {INPUT}')
+        print(f'Expected: {EXPECTED}')
+        print(f'Output: {OUTPUT}')
         self.assertEqual(OUTPUT, EXPECTED)
     def test_case_3(self):
         INPUT = "MCMXCIV"
         EXPECTED = 1994
         OUTPUT = romanToInt(INPUT)
+
+        print(f'\nInput: {INPUT}')
+        print(f'Expected: {EXPECTED}')
+        print(f'Output: {OUTPUT}')
         self.assertEqual(OUTPUT, EXPECTED)
 
 if __name__ == '__main__':
-    unittest.main()
+    print("Testing solution\n")
+    unittest.main(verbosity=2)

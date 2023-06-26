@@ -51,19 +51,32 @@ class TestSolution(unittest.TestCase):
         INPUT_2 = "b"
         EXPECTED = False
         OUTPUT = canConstruct(INPUT_1, INPUT_2)
+        
+        print(f'\nInput: "{INPUT_1}" "{INPUT_2}"')
+        print(f'Expected: {EXPECTED}')
+        print(f'Output: {OUTPUT}')
         self.assertEqual(OUTPUT, EXPECTED)
     def test_case_2(self):
         INPUT_1 = "aa"
         INPUT_2 = "ab"
         EXPECTED = False
         OUTPUT = canConstruct(INPUT_1, INPUT_2)
+
+        print(f'\nInput: "{INPUT_1}" "{INPUT_2}"')
+        print(f'Expected: {EXPECTED}')
+        print(f'Output: {OUTPUT}')
         self.assertEqual(OUTPUT, EXPECTED)
     def test_case_3(self):
         INPUT_1 = "aa"
         INPUT_2 = "aab"
         EXPECTED = True
         OUTPUT = canConstruct(INPUT_1, INPUT_2)
+
+        print(f'\nInput: "{INPUT_1}" "{INPUT_2}"')
+        print(f'Expected: {EXPECTED}')
+        print(f'Output: {OUTPUT}')
         self.assertEqual(OUTPUT, EXPECTED)
 
 if __name__ == '__main__':
-    unittest.main()
+    print("Testing solution\n")
+    unittest.main(verbosity=2)
