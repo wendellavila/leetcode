@@ -13,7 +13,6 @@ answer[i] == i (as a string) if none of the above conditions are true.
 """
 
 def fizzBuzz(n: int) -> List[str]:
-
     answer = []
     for i in range(1, n+1):
         if i % 3 == 0 or i % 5 == 0:
