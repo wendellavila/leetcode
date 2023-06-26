@@ -10,11 +10,10 @@ https://leetcode.com/problems/roman-to-integer/
 
 def romanToInt(s: str) -> int:
     """
-    For each character in the string:
+    For each character in the input string:
     If current character has a bigger corresponding value than the next character, add it to the total and repeat for the next.
     If current character has a smaller corresponding value than the next character, add the difference between the next character and the
     current to the total, skip the next character, and repeat for the character after the next.
-
     """
     toInt = 0
     values = {'I': 1,'V': 5,'X': 10,'L': 50,'C': 100,'D': 500,'M': 1000}

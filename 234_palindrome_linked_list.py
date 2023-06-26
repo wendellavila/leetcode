@@ -16,8 +16,9 @@ class ListNode:
         self.next = next
 
 def isPalindrome(head: Optional[ListNode]) -> bool:
-    """For each value in the list, concatenate it to the start of a string and to the end of another string
-    if the final strings are equal, input is palindrome.
+    """
+    For each value in the input list, concatenate it to the start of a string and to the end of another string.
+    If the two strings are equal at the end, input is palindrome.
     """
     values = ""
     values_inverse = ""
