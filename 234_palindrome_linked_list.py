@@ -14,6 +14,12 @@ class ListNode:
     def __init__(self, val=None, next=None):
         self.val = val
         self.next = next
+    def __str__(self, is_head=True):
+        out = "[" + str(self.val) if is_head else str(self.val)
+        if self.next:
+            return out + "," + self.next.__str__(is_head=False)
+        else:
+            return out + "]"
 
 def isPalindrome(head: Optional[ListNode]) -> bool:
     """
@@ -50,22 +56,39 @@ class TestSolution(unittest.TestCase):
         INPUT = self.build_linked_list([1,2,2,1])
         EXPECTED = True
         OUTPUT = isPalindrome(INPUT)
+
+        print(f'\nInput: {INPUT}')
+        print(f'Expected: {EXPECTED}')
+        print(f'Output: {OUTPUT}')
         self.assertEqual(OUTPUT, EXPECTED)
     def test_case_2(self):
         INPUT = self.build_linked_list([1,2])
         EXPECTED = False
         OUTPUT = isPalindrome(INPUT)
+
+        print(f'\nInput: {INPUT}')
+        print(f'Expected: {EXPECTED}')
+        print(f'Output: {OUTPUT}')
         self.assertEqual(OUTPUT, EXPECTED)
     def test_case_3(self):
         INPUT = self.build_linked_list([1,2,2,3,2,2,1])
         EXPECTED = True
         OUTPUT = isPalindrome(INPUT)
+
+        print(f'\nInput: {INPUT}')
+        print(f'Expected: {EXPECTED}')
+        print(f'Output: {OUTPUT}')
         self.assertEqual(OUTPUT, EXPECTED)
     def test_case_4(self):
         INPUT = self.build_linked_list([1,2,2,3,2,2,3])
         EXPECTED = False
         OUTPUT = isPalindrome(INPUT)
+
+        print(f'\nInput: {INPUT}')
+        print(f'Expected: {EXPECTED}')
+        print(f'Output: {OUTPUT}')
         self.assertEqual(OUTPUT, EXPECTED)
 
 if __name__ == '__main__':
-    unittest.main()
+    print("Testing solution\n")
+    unittest.main(verbosity=2)
