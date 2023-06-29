@@ -16,6 +16,10 @@ https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/
 """
 
 def kWeakestRows(mat: List[List[int]], k: int) -> List[int]:
+    """
+    Creates a dictionary where each key is the row number and each value is the strength of that row
+    At the end, sort dict using python's built in sorted() and return keys ordered by strength
+    """
     row_strength = {}
 
     for i in range(0, len(mat)):
