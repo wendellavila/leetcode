@@ -11,6 +11,11 @@ https://leetcode.com/problems/greatest-common-divisor-of-strings/
 """
 
 def isDivisor(divisor:str, dividend:str) -> bool:
+    """
+    If the length of the dividend string is not a divisor of the length of the divisor string, return false
+    Otherwise, slice divident in pieces of the same size as the divisor, checking if the slice is equal to the divisor
+    If all slices are equal, return true, otherwise return false.
+    """
     if len(dividend) % len(divisor) == 0:
         count = 0
         for j in range(0, len(dividend)//len(divisor)):
@@ -25,6 +30,10 @@ def isDivisor(divisor:str, dividend:str) -> bool:
         return False
 
 def gcdOfStrings(str1: str, str2: str) -> str:
+    """
+    Iterate through all substrings of the shortest strings that start with the first character of it,
+    testing if it's a divisor of both original strings.
+    """
     biggest = str1 if len(str1) >= len(str2) else str2
     shortest = str1 if biggest == str2 else str2
 
