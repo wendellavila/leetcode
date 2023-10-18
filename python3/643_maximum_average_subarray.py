@@ -10,7 +10,7 @@ Find a contiguous subarray whose length is equal to k that has the maximum
 average alue and return this value.
 Any answer with a calculation error less than 10-5 will be accepted.
 
-https://leetcode.com/problems/roman-to-integer/
+https://leetcode.com/problems/maximum-average-subarray-i/
 """
 
 def findMaxAverage(nums: List[int], k: int) -> float:
